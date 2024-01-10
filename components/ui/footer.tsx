@@ -82,7 +82,7 @@ export default function Footer() {
 								<div className="w-full">
 									<label className="block text-sm sr-only" htmlFor="Proposal">Email</label>
 									<div className="relative flex items-center max-w-xs">
-										<input id="Proposal" type="email" className="form-input w-full text-gray-800 px-3 py-2 pr-12 text-sm rounded-2xl" placeholder="Ваш email" required />
+										<input id="send_faq" type="email" className="form-input w-full text-gray-800 px-3 py-2 pr-12 text-sm rounded-2xl" placeholder="Ваш email" required />
 										<button type="submit" className="absolute inset-0 left-auto" aria-label="Subscribe">
 											<span className="absolute inset-0 right-auto w-px -ml-px my-2 bg-gray-300" aria-hidden="true"></span>
 											<svg className="w-3 h-3 fill-current text-purple-600 mx-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">

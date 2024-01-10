@@ -1814,10 +1814,6 @@ html {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
 .pb-12{
   padding-bottom: 3rem;
 }
@@ -2204,9 +2200,6 @@ html {
   .sm\:flex{
     display: flex;
   }
-  .sm\:hidden{
-    display: none;
-  }
   .sm\:h-20{
     height: 5rem;
   }
@@ -2259,6 +2252,10 @@ html {
   .sm\:py-littleP{
     padding-top: 7px;
     padding-bottom: 7px;
+  }
+  .sm\:py-6{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
   .sm\:text-3xl{
     font-size: 2rem;
@@ -2397,6 +2394,10 @@ html {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
+  .md\:py-10{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
   .md\:pb-16{
     padding-bottom: 4rem;
   }
@@ -2408,6 +2409,9 @@ html {
   }
   .md\:pt-40{
     padding-top: 10rem;
+  }
+  .md\:pt-10{
+    padding-top: 2.5rem;
   }
   .md\:text-4xl{
     font-size: 2.625rem;
@@ -2486,6 +2490,10 @@ html {
   .lg\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  .lg\:py-12{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
   .lg\:pt-12{
     padding-top: 3rem;

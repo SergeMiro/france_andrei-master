@@ -28,11 +28,11 @@ export default function Features() {
     <section className="relative">
 
       {/* Section background (needs .relative class on parent and next sibling elements) */}
-      <div className="absolute inset-0 bg-gray-100 pointer-events-none mb-16" aria-hidden="true"></div>
+      <div className="absolute inset-0 bg-gray-100 pointer-events-none" aria-hidden="true"></div>
       <div className="absolute left-0 right-0 m-auto w-px p-px h-20 bg-gray-200 transform -translate-y-1/2"></div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="pt-12 lg:pt-12 md:pt-12">
+        <div className="sm:py-6 md:py-10 lg:py-12 ">
 
           {/* Section header */}
 			 <div className="max-w-3xl mx-auto text-justify pb-12 md:pb-20 ">
@@ -58,7 +58,7 @@ export default function Features() {
 
 
             {/* Content */}
-            <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-9 lg:col-span-6 mb-10" data-aos="fade-right">
+            <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-9 lg:col-span-6" data-aos="fade-right">
               <div className="inline-flex items-center mb-4">
                 <p className="h3 text-start inline">Наши услуги</p>
 					 <img className='w-12 ml-2 inline' src="/images/cible2.png" alt="доп цель" />
@@ -155,8 +155,8 @@ export default function Features() {
 
             {/* Tabs items */}
 				<div className="max-w-xl md:max-w-none md:w-full mx-auto my-auto items-center md:col-span-3 lg:col-span-6 mb-8 md:mb-0 md:order-1">
-					<div className="transition-all">
-						<div className="relative flex flex-col text-center lg:text-right" data-aos="zoom-y-out" ref={tabs}>
+					<div className="transition-all items-center"> {/* ЗДЕСЬ */}
+						<div className="relative flex flex-col text-center lg:text-right" data-aos="zoom-y-out" ref={tabs}>  {/* ЗДЕСЬ */}
 							{/* Item 1 */}
 							<Transition
 							show={tab === 1}
@@ -171,8 +171,8 @@ export default function Features() {
 							beforeEnter={() => heightFix()}
 							unmount={false}
 							>
-							<div className="relative inline-flex flex-col">
-								<Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={MigrationImg} width={500} height="462" alt="migration image" />
+							<div className="relative inline-flex flex-col items-center">
+								<Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={MigrationImg} width={400}  alt="migration image" />
 							</div>
 							</Transition>
 							{/* Item 2 */}
@@ -190,7 +190,7 @@ export default function Features() {
 							unmount={false}
 							>
 							<div className="relative inline-flex flex-col">
-								<Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={StageImg} width={500} height="462" alt="stage image" />
+								<Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={StageImg} width={380}  alt="stage image" />
 							</div>
 							</Transition>
 							{/* Item 3 */}
@@ -208,7 +208,7 @@ export default function Features() {
 							unmount={false}
 							>
 							<div className="relative inline-flex flex-col">
-								<Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={EducationImg} width={500} height="462" alt="education image" />
+								<Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={EducationImg} width={400} alt="education image" />
 							</div>
 							</Transition>
 							{/* Item 4 */}
@@ -226,7 +226,7 @@ export default function Features() {
 							unmount={false}
 							>
 							<div className="relative inline-flex flex-col">
-								<Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={WorkImg} width={500} height="462" alt="education image" />
+								<Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={WorkImg} width={380} alt="education image" />
 							</div>
 							</Transition>
 							{/* Item 5 */}
@@ -244,7 +244,7 @@ export default function Features() {
 							unmount={false}
 							>
 							<div className="relative inline-flex flex-col">
-								<Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={AdministrationImg} width={500} height="462" alt="education image" />
+								<Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={AdministrationImg} width={420} alt="education image" />
 							</div>
 							</Transition>
 						</div>
