@@ -2156,6 +2156,9 @@ html {
   }
 }
 @media (min-width: 330px){
+  .xs\:mt-10{
+    margin-top: 2.5rem;
+  }
   .xs\:h-80{
     height: 20rem;
   }
@@ -2187,6 +2190,12 @@ html {
   }
   .sm\:mt-20{
     margin-top: 5rem;
+  }
+  .sm\:mt-5{
+    margin-top: 1.25rem;
+  }
+  .sm\:mt-10{
+    margin-top: 2.5rem;
   }
   .sm\:flex{
     display: flex;
@@ -2224,6 +2233,9 @@ html {
   .sm\:flex-col{
     flex-direction: column;
   }
+  .sm\:flex-wrap{
+    flex-wrap: wrap;
+  }
   .sm\:flex-nowrap{
     flex-wrap: nowrap;
   }
@@ -2236,6 +2248,12 @@ html {
   .sm\:overflow-hidden{
     overflow: hidden;
   }
+  .sm\:p-2{
+    padding: 0.5rem;
+  }
+  .sm\:p-6{
+    padding: 1.5rem;
+  }
   .sm\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -2247,6 +2265,15 @@ html {
   .sm\:py-littleP{
     padding-top: 7px;
     padding-bottom: 7px;
+  }
+  .sm\:pt-1{
+    padding-top: 0.25rem;
+  }
+  .sm\:pt-16{
+    padding-top: 4rem;
+  }
+  .sm\:pt-20{
+    padding-top: 5rem;
   }
   .sm\:text-3xl{
     font-size: 2rem;
@@ -2283,6 +2310,9 @@ html {
   }
   .md\:mt-24{
     margin-top: 6rem;
+  }
+  .md\:mt-20{
+    margin-top: 5rem;
   }
   .md\:flex{
     display: flex;
@@ -2322,6 +2352,9 @@ html {
   }
   .md\:w-full{
     width: 100%;
+  }
+  .md\:w-1\/3{
+    width: 33.333333%;
   }
   .md\:max-w-2xl{
     max-width: 42rem;
@@ -2364,6 +2397,9 @@ html {
   }
   .md\:bg-opacity-90{
     --tw-bg-opacity: 0.9;
+  }
+  .md\:p-6{
+    padding: 1.5rem;
   }
   .md\:px-8{
     padding-left: 2rem;
@@ -2467,6 +2503,9 @@ html {
   }
   .lg\:overflow-visible{
     overflow: visible;
+  }
+  .lg\:p-6{
+    padding: 1.5rem;
   }
   .lg\:px-5{
     padding-left: 1.25rem;

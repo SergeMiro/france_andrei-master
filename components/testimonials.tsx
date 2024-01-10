@@ -60,8 +60,8 @@ export default function Testimonials() {
 					</div>
 
 					{/* Testimonials */}
-					<div className='flex flex-row flex-nowrap w-full '>
-						<div className="w-1/3 mx-auto mt-20" data-aos="zoom-y-out ">
+					<div className='flex xs:flex-wrap sm:flex-wrap md:flex-nowrap lg:flex-nowrap w-full '>
+						<div className="xs:w-full sm:w-full md:w-1/3 mx-auto xs:mt-10 sm:mt-10 md:mt-20" data-aos="zoom-y-out ">
 							<div className="relative flex items-start border-2 border-gray-200 rounded-2xl bg-white mx-2">
 								<div className="text-center p-6 pt-20 mx-2 md:mx-0">
 									<div className="absolute top-0 -mt-8 left-1/2 transform -translate-x-1/2">
@@ -83,7 +83,7 @@ export default function Testimonials() {
 							</div>
 						</div>
 
-						<div className="w-1/3 mx-auto mt-20" data-aos="zoom-y-out ">
+						<div className="xs:w-full sm:w-full md:w-1/3 mx-auto xs:mt-10 sm:mt-10 md:mt-20" data-aos="zoom-y-out ">
 							<div className="relative flex items-start border-2 border-gray-200 rounded-2xl bg-white mx-2">
 								<div className="text-center p-6 pt-20 mx-2 md:mx-0">
 									<div className="absolute top-0 -mt-8 left-1/2 transform -translate-x-1/2">
@@ -105,7 +105,7 @@ export default function Testimonials() {
 							</div>
 						</div>
 
-						<div className="w-1/3 mx-auto mt-20" data-aos="zoom-y-out">
+						<div className="xs:w-full sm:w-full md:w-1/3 mx-auto xs:mt-10 sm:mt-10 md:mt-20" data-aos="zoom-y-out">
 							<div className="relative flex items-start border-2 border-gray-200 rounded-2xl bg-white mx-2">
 								<div className="text-center p-6 pt-20 mx-2 md:mx-0">
 									<div className="absolute top-0 -mt-8 left-1/2 transform -translate-x-1/2">

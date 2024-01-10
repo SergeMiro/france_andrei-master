@@ -4,6 +4,7 @@ export const metadata = {
 	description: 'Галерея фото',
 }
 
+require('dotenv').config();
 
 import React from 'react';
 import Gallery from '@/components/gallery/gallery';

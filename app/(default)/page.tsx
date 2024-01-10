@@ -1,8 +1,10 @@
 
 export const metadata = {
-	title: 'Home',
-	description: 'Home page',
+	title: 'France Experience',
+	description: 'Стажировки во Франции',
 }
+
+require('dotenv').config();
 
 import React from 'react';
 import Hero from '@/components/hero'

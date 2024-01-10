@@ -5,6 +5,9 @@ export const metadata = {
 	description: 'Услуги France-experience',
 }
 
+require('dotenv').config();
+
+
 import StageIcon from '@/public/fonts/stage_icon.png'
 import MovingIcon from '@/public/fonts/moving_icon.png'
 import EducIcon from '@/public/fonts/educ_icon.png'
