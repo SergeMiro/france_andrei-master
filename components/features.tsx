@@ -11,10 +11,9 @@ import AdministrationImg from '@/public/images/administration.png'
 import Link from 'next/link'
 
 export default function Features() {
-  
   const [tab, setTab] = useState<number>(1)
-
   const tabs = useRef<HTMLDivElement>(null)
+  const aboutUsRef = useRef<HTMLDivElement>(null);  // Добавляем реф для блока "О нас"
 
   const heightFix = () => {
     if (tabs.current && tabs.current.parentElement) tabs.current.parentElement.style.height = `${tabs.current.clientHeight}px`
@@ -23,6 +22,12 @@ export default function Features() {
   useEffect(() => {
     heightFix()
   }, []) 
+
+	 const scrollToAboutUs = () => {     // Функция прокрутки к блоку "О нас"
+		if (aboutUsRef.current) {
+		  aboutUsRef.current.scrollIntoView({ behavior: 'smooth' });
+		}
+	 };
 
   return (
     <section className="relative">
@@ -37,7 +42,7 @@ export default function Features() {
           {/* Section header */}
 			 <div className="max-w-3xl mx-auto text-justify pb-12 md:pb-20 ">
 				<div className='flex flex-col items-center mb-4 '>
-					<h1 className="h2">Bienvenue</h1>
+					<h1 ref={aboutUsRef} id="aboutUs" className="h2">Bienvenue</h1>
 					<img className='w-15 h-10 mt-2' src="/fonts/icon_fr.png" alt="флаг Франции" />
 				</div>
 				<p className="text-xl text-gray-600">
@@ -47,15 +52,8 @@ export default function Features() {
 				</p>
 			</div>
 
-
-
           {/* Section content */}
           <div className="md:grid md:grid-cols-12 md:gap-6">
-
-
-
-
-
 
             {/* Content */}
             <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-9 lg:col-span-6" data-aos="fade-right">

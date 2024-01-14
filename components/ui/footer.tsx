@@ -1,7 +1,7 @@
 import React, { useState, FormEvent } from 'react';
 import Image from 'next/image'
 import Logo_footer from '@/public/images/logo.svg'
-import axios from 'axios'
+
 
 
 
