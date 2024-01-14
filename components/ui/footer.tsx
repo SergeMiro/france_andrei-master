@@ -1,5 +1,9 @@
+import React, { useState, FormEvent } from 'react';
 import Image from 'next/image'
 import Logo_footer from '@/public/images/logo.svg'
+import axios from 'axios'
+
+
 
 export default function Footer() {
 	return (
@@ -75,15 +79,31 @@ export default function Footer() {
 
 					{/* 5th block */}
 					<div className="sm:col-span-6 md:col-span-3 lg:col-span-3">
-						<h6 className="text-gray-800 font-medium mb-2">У вас сложные вопросы ?</h6>
-						<p className="text-sm text-gray-600 mb-4">Получите наш FAQ 😉</p>
-						<form>
+						<h6 className="text-gray-800 font-medium mb-2">У вас сложные вопросы ? 😉</h6>
+						<div className='flex flex-row flex-nowrap justify-start items-center mb-4'>
+							<p className="text-sm text-gray-600">Получите наш FAQ </p>
+							<a className='ml-3' href="/files/FAQ_France-Experience.pdf" download="FAQ_France-Experience.pdf" aria-label="Скачать FAQ">
+								<img
+									className='w-6 hover:scale-110 anim'
+									src="/fonts/icon_download.png"
+									alt="скачать"
+									title="Скачать FAQ"
+								/>
+							</a>
+						</div>
+						<form className='hidden'>
 							<div className="flex flex-wrap mb-4">
 								<div className="w-full">
 									<label className="block text-sm sr-only" htmlFor="Proposal">Email</label>
 									<div className="relative flex items-center max-w-xs">
-										<input id="mail_faq" type="email" className="form-input w-full text-gray-800 px-3 py-2 pr-12 text-sm rounded-2xl" placeholder="Ваш email" required />
-										<button id='send_faq' type="submit" className="absolute inset-0 left-auto " aria-label="отправить">
+										<input
+											id="mail_faq"
+											type="email"
+											className="form-input w-full text-gray-800 px-3 py-2 pr-12 text-sm rounded-2xl"
+											placeholder="Ваш email"
+											required
+										/>
+										<button type="submit" className="absolute inset-0 left-auto" aria-label="отправить">
 											<span className="absolute inset-0 right-auto w-px -ml-px my-2 bg-gray-300" aria-hidden="true"></span>
 											<svg className="w-3 h-3 fill-current text-purple-600 mx-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
 												<path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" fillRule="nonzero" />
