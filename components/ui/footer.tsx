@@ -3,8 +3,6 @@ import Image from 'next/image'
 import Logo_footer from '@/public/images/logo.svg'
 
 
-
-
 export default function Footer() {
 	return (
 		<footer>

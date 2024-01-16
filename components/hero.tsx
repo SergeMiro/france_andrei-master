@@ -1,6 +1,8 @@
 import VideoThumb from '@/public/images/hero-image.png'
 import ModalVideo from '@/components/modal-video'
 
+// xs: sm: md: lg: 
+
 export default function Hero() {
 	return (
 		<section className="relative">
@@ -25,15 +27,15 @@ export default function Hero() {
 			<div className="max-w-6xl mx-auto px-4 sm:px-6">
 
 				{/* Hero content */}
-				<div className="pt-32 pb-12 md:pt-22 md:pb-15">
+				<div className="xs:pt-20 sm:pt-20 md:pt-22 lg:pt-30 pb-12 md:pb-15">
 
 					{/* Section header */}
 					<div className="lg:flex space-x-0 lg:space-x-2  sm:py-littleP lg:mt-5 sm:mt-2">
 						<div className='relative w-full lg:w-3/5 rounded-md inline-block overflow-hidden mt-8 lg:mt-8 sm:mt-2'>
 							<div className='flex xl:flex-nowrap lg:flex-nowrap  md:flex-nowrap  sm:flex-nowrap xs:flex-wrap'>
-								<div className=" text-4xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold leading-tighter tracking-tighter text-center text-gray-700 mb-1" data-aos="zoom-y-out">Поможем осуществить вашу
-									<span className="bg-gradient-to-r from-red-500 via-gray-300 to-blue-500 text-transparent bg-clip-text lg:text-5xl md:text-4xl sm:text-4xl"> французскую</span>
-									<p className="lg:text-5xl 4d:text-5xl sm:text-4xl text-4xl font-extrabold leading-tighter tracking-tighter text-gray-700 mb-4 mt-0" data-aos="zoom-y-out">
+								<div className="xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tighter tracking-tighter text-center text-gray-700 mb-1" data-aos="zoom-y-out">Поможем осуществить вашу
+									<span className="bg-gradient-to-r from-red-500 via-gray-300 to-blue-500 text-transparent bg-clip-text xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl"> французскую</span>
+									<p className="xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tighter tracking-tighter text-gray-700 mb-4 mt-0" data-aos="zoom-y-out">
 										мечту
 									</p>
 								</div>
@@ -43,10 +45,10 @@ export default function Hero() {
 
 
 							<div className="max-w-3xl">
-								<p className="pr-5 z-50 text-xl text-gray-600 pt-6 mb-1 text-end italic" data-aos="zoom-y-out" data-aos-delay="150">
+								<p className="xs:text-xs sm:text-sm md:text-base lg:text-base pr-5 z-50 text-gray-600 pt-6 mb-1 text-end italic" data-aos="zoom-y-out" data-aos-delay="150">
 									„ La seule source de connaissance c'est l'expérience. “
 								</p>
-								<p className="pr-5 z-50 text-xl text-gray-600 mb-8 text-end italic" data-aos="zoom-y-out" data-aos-delay="150">
+								<p className="xs:text-xs sm:text-sm md:text-base lg:text-base pr-5 z-50 text-gray-600 mb-8 text-end italic" data-aos="zoom-y-out" data-aos-delay="150">
 									Albert Einstein
 								</p>
 								<p className='text-xl text-gray-600 mb-8 text-start italic'></p>
