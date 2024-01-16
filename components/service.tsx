@@ -1,8 +1,27 @@
 import React, { forwardRef, Ref } from 'react';
-import Image from 'next/image';
+import Image, { ImageProps } from 'next/image';
 
+interface ServiceProps {
+  iconSrc: ImageProps['src'];
+  title: string;
+  description: string;
+  blockStyle?: string;
+  isListVisible?: string;
+  listItem1?: string;
+  listItem2?: string;
+  sectionStyle?: string; // Добавляем новый параметр
+}
 
-const Service = forwardRef(({ iconSrc, title, description, blockStyle, isListVisible, listItem1, listItem2 }, ref) => {
+const Service = forwardRef<HTMLDivElement, ServiceProps>(({
+  iconSrc,
+  title,
+  description,
+  blockStyle,
+  isListVisible,
+  listItem1,
+  listItem2,
+  sectionStyle // Используем новый параметр
+}, ref) => {
   return (
     <div className={blockStyle} ref={ref}>
       <div className="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8" data-aos="zoom-y-out">

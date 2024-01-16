@@ -1,6 +1,5 @@
 "use client"
 
-
 import React, { useRef, Ref } from 'react';
 import Service from '@/components/service';
 import StageIcon from '@/public/fonts/stage_icon.png';

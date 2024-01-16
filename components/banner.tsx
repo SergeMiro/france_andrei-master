@@ -18,7 +18,7 @@ export default function Banner() {
               <a href="https://t.me/FranceExperienceBot" target="_blank" rel="noopener noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  alt="button Telegram"
+                  aria-label="button Telegram"
                   enable-background="new 0 0 24 24"
                   viewBox="0 0 24 24"
                   className="mr-2 w-6"
