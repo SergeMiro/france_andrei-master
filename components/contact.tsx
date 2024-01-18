@@ -1,4 +1,17 @@
+'use client'
+import { useRef } from 'react'
+
 export default function Contact() {
+
+	const contactRef = useRef<HTMLDivElement>(null);  // Добавляем реф для блока "О нас"
+	const scrollToContacts = () => {     // Функция прокрутки к блоку "О нас"
+		if (contactRef.current) {
+			contactRef.current.scrollIntoView({ behavior: 'smooth' });
+		}
+	 };
+
+
+
 	return (
 		<section>
 			<div className="max-w-6xl mx-auto mb-12 px-4 sm:px-6 ">
@@ -37,7 +50,7 @@ export default function Contact() {
 						</div>
 
 
-						<div className="flex justify-center items-center">
+						<div ref={contactRef} id="contactUs" className="flex justify-center items-center">
 							<div className="sm:w-3/4 md:w-3/5 flex flex-row flex-nowrap items-center">
 								<img className="sm:w-18 sm:h-20 md:w-28 md:h-28 items-center" src="/fonts/icon_megaphone.png" alt="megaphone" />
 								<p className="sm:text-3xl md:text-4xl text-white font-bold mb-2 sm:ml-4 md:ml-8">Связаться с нами 📱</p>

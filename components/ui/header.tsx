@@ -10,7 +10,9 @@ import MobileMenu from './mobile-menu'
 export default function Header() {
   const [top, setTop] = useState<boolean>(true);
 
-  const scrollToAboutUs = () => {
+
+  ///////////////////////////// SCROLL FUNCTION //////////////////////////////////
+  const scrollToAboutUs = () => { 
     const aboutUsElement = document.getElementById('aboutUs');
     const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
 
@@ -22,6 +24,20 @@ export default function Header() {
       console.error('Element with id "aboutUs" not found.');
     }
   };
+
+  const scrollToContacts = () => {
+	const contactUsElement = document.getElementById('contactUs');
+	const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
+
+	if (contactUsElement) {
+	  const targetPosition = contactUsElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+	  console.log('Scrolling to:', targetPosition);
+	  window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+	} else {
+	  console.error('Element with id "contactUs" not found.');
+	}
+ };
+//////////////////////////////////////////////////////////////////////////////////
 
   // Добавляем слушателя события прокрутки
   const scrollHandler = () => {
@@ -80,7 +96,7 @@ export default function Header() {
 								<Link href="/gallery" className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">Галерея</Link>
 							</li>
 							<li>
-								<Link href="/contacts" className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">Контакты</Link>
+								<Link href="/" onClick={(e) => { e.preventDefault(); scrollToContacts(); }} className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">Контакты</Link>
 							</li>
 							<li className='hidden'>
 								<Link href="/signup" className="btn-sm text-gray-100 bg-purple-800 rounded-3xl hover:bg-gray-600 ml-3">
