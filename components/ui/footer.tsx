@@ -129,7 +129,14 @@ export default function Footer() {
 								</div>
 							</div>
 						</form>
+						<h6 className="text-gray-800 font-medium mb-2 mt-8">Служба поддержки 24/7 🕜</h6>
+						<div className='flex flex-row flex-nowrap justify-start items-center mb-4'>
+							<p className="text-sm text-gray-600">contact@france-experience.fr</p>
+						</div>
 					</div>
+
+
+
 
 				</div>
 

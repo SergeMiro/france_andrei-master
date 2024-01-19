@@ -93,7 +93,7 @@ export default function Testimonials() {
 										<Image className="relative rounded-full" src={AvatarImage} width={96} height={96} alt="Testimonial 01" />
 									</div>
 									<span className="xs:text-lg sm:text-lg md:text-xl lg:text-xl text-gray-600 mb-4 px-1">
-										“Была на стажировке с конца декабря по март в отеле 4* в Куршевеле. В отеле было ещё трое русских стажеров,поэтому у нас сразу создалась своя комманда поддержки)) .Я работала в ресторане на завтраках и ужинах. Днём было свободное время, удалось покататься на горных лыжах,это был мой первый опыт...“
+										“Была на стажировке с конца декабря по март в отеле 4* в Куршевеле. В отеле было ещё трое русских стажеров,поэтому у нас сразу создалась своя комманда поддержки)) .Я работала в ресторане на завтраках и ужинах. Днём было свободное время, удалось покататься на горных лыжах,это был ...“
 									</span>
 									<a href="https://vk.com/topic-92692367_34307956" target="_blank" className='text-purple-300 hover:text-purple-500 cursor-pointer anim'> ... читать далее</a>
 									<cite className="block font-bold text-lg not-italic mt-3 mb-1">Настя</cite>
