@@ -51,6 +51,13 @@ module.exports = {
 				mediumP: "18px",
 				littleP: "7px",
 			},
+			borderRadius: {
+				myxl: "250px",
+				mylg: "100px",
+				mymd: "75px",
+				mysm: "35px",
+				myxs: "10px",
+			},
 			screens: {
 				xs: "330px",
 				sm: "480px",

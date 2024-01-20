@@ -48,12 +48,12 @@ export default function MobileMenu() {
       >
         <span className="sr-only">Menu</span>
         <svg
-          className="w-6 h-6 fill-current text-gray-900"
+          className="w-4 h-4 fill-current text-purple-900"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <rect y="4" width="24" height="2" />
-          <rect y="11" width="24" height="2" />
+          <rect y="4" width="16" height="2" />
+          <rect y="11" width="20" height="2" />
           <rect y="18" width="24" height="2" />
         </svg>
       </button>
@@ -64,7 +64,7 @@ export default function MobileMenu() {
           show={mobileNavOpen}
           as="nav"
           id="mobile-nav"
-          className="absolute top-full h-screen pb-16 z-20 left-0 w-full overflow-scroll bg-white"
+          className="absolute top-full h-auto pb-16 z-20 left-0 w-full overflow-scroll bg-white border-b border-b-purple-900 rounded-bl-myxl "
           enter="transition ease-out duration-200 transform"
           enterFrom="opacity-0 -translate-y-2"
           enterTo="opacity-100 translate-y-0"
