@@ -48,7 +48,7 @@ export default function Hero() {
 								<p className="xs:text-xs sm:text-sm md:text-base lg:text-base pr-5 z-50 text-gray-600 pt-6 mb-1 text-end italic" data-aos="zoom-y-out" data-aos-delay="150">
 									„ La seule source de connaissance c'est l'expérience. “
 								</p>
-								<p className="xs:text-xs sm:text-sm md:text-base lg:text-base pr-5 z-50 text-gray-600 mb-8 text-end italic" data-aos="zoom-y-out" data-aos-delay="150">
+								<p className="xs:text-xs sm:text-sm md:text-base lg:text-base pr-5 z-50 text-gray-600 mb-8 text-end mr-3 italic" data-aos="zoom-y-out" data-aos-delay="150">
 									Albert Einstein
 								</p>
 								<p className='text-xl text-gray-600 mb-8 text-start italic'></p>

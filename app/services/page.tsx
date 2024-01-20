@@ -17,7 +17,7 @@ const Services = () => {
 
   return (
     <>
-      <section className='relative sm:mt-20 md:mt-30 lg:mt-30'>
+      <section className='relative xs:mt-14 md:mt-30 lg:mt-30'>
         <Service
           ref={stageRef}
           iconSrc={StageIcon}
