@@ -27,7 +27,7 @@ export default function Testimonials() {
 
 					{/* xs:text-lg sm:text-lg md:text-xl lg:text-xl text-gray-600 */}
 					<div className="max-w-3xl mx-auto  pb-12 md:pb-16">
-						<h2 className="h2 mb-4 text-center pb-2">Почему нам можно доверять🌟</h2>
+						<h2 className="h2 mb-4 text-center pb-2 text-gray-700">Почему нам можно доверять🌟</h2>
 						<div className='flex flex-row flex-nowrap items-center justify-center'>
 							<img className='w-10 mr-2 transition-transform ease-in-out duration-300 transform hover:scale-75' src="/fonts/icon_o.png" alt="icon_0" />
 							<p className="xs:text-lg sm:text-lg md:text-xl lg:text-xl text-gray-600 xs:m-1 md:m-2" data-aos="zoom-y-out">

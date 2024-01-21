@@ -38,7 +38,7 @@ export default function Features() {
 			<div className="xs:py-3 sm:py-6 md:py-10 lg:py-12">
 			  <div className="max-w-3xl mx-auto md:text-justify pb-12 md:pb-20 ">
 				 <div className='flex flex-col items-center mb-4'>
-					<h1 ref={aboutUsRef} id="aboutUs" className="h2">Bienvenue</h1>
+					<h1 ref={aboutUsRef} id="aboutUs" className="h2 text-gray-700">Bienvenue</h1>
 					<img className='w-15 h-10 mt-2' src="/fonts/icon_fr.png" alt="флаг Франции" />
 				 </div>
 				 <p className="xs:text-lg sm:text-lg md:text-xl lg:text-xl text-gray-600">
@@ -49,7 +49,7 @@ export default function Features() {
 			  <div className="flex xs:flex-wrap-reverse sm:flex-wrap-reverse md:flex-nowrap lg:flex-nowrap max-w-6xl justify-around px-5 sm:px-6">
 				 <div className="w-full mx-auto md:col-span-9 lg:col-span-6" data-aos="fade-right">
 					<div className="inline-flex items-center mb-4">
-					  <p className="h2 text-start inline">Наши услуги</p>
+					  <p className="h2 text-start inline text-gray-700">Наши услуги</p>
 					  <img className='w-12 ml-2 inline' src="/images/cible2.png" alt="доп цель" />
 					</div>
 					<div className="mb-8 md:mb-0">

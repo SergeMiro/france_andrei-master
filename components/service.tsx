@@ -26,9 +26,9 @@ const Service = forwardRef<HTMLDivElement, ServiceProps>(({
     <div className={blockStyle} ref={ref}>
       <div className="max-w-6xl mx-auto xs:py-6 md:py-8 px-4 sm:px-6 lg:px-8" data-aos="zoom-y-out">
 
-			<h1 className="xs:text-2xl md:text-4xl font-semibold mb-4 text-start text-purple-900">{title}</h1>
+			<h1 className="xs:text-2xl md:text-4xl font-semibold mb-4 xs:text-center md:text-start text-purple-900">{title}</h1>
 		  <div>
-		  		<Image className="float-start xs: md:max-w-full mr-6 my-1 rounded h-auto transform animate-float" src={iconSrc} width={100} alt="stage image" />
+		  		<Image className="xs:float-none xs:mx-auto  md:float-start md:max-w-full md:mr-6 my-1 rounded h-auto transform animate-float" src={iconSrc} width={100} alt="stage image" />
        		<p className="xs:text-lg sm:text-lg md:text-xl lg:text-xl text-gray-600 xs:m-1 md:m-2">{description}</p>
 		  </div>
         <div className={isListVisible}>
