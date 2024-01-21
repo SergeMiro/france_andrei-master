@@ -88,6 +88,9 @@ export default function Footer() {
 							<li className="mb-2">
 								<a href="/contacts" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Контакты</a>
 							</li>
+							<li className="mb-2">
+								<a href="/" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">FAQ</a>
+							</li>
 						</ul>
 					</div>
 

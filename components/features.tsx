@@ -140,7 +140,7 @@ export default function Features() {
               {/* ТУТ ОШИБКА */}
 				 <div className="max-w-xl md:max-w-none md:w-full mx-auto my-auto marker:items-center md:col-span-3 lg:col-span-6 md:order-1">  {/* ТУТ ОШИБКА */}
 					<div className="transition-all items-center">
-					  <div className="relative flex flex-col text-center lg:text-right" data-aos="zoom-y-out" ref={tabs}>
+					  <div className="relative flex flex-col text-center lg:text-right" data-aos="zoom-y-out" ref={tabs} width={480}>
 						 <Transition
 							show={tab === 1}
 							appear={true}

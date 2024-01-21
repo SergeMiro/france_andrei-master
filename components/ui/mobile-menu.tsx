@@ -102,11 +102,20 @@ export default function MobileMenu() {
             </li>
 				<li className="text-center my-3">
               <Link
-                href="/contacts"
+                href="/"
                 className=" text-gray-600 text-center w-full my-2"
                 onClick={() => setMobileNavOpen(false)}
               >
                 <span>Контакты</span>
+              </Link>
+            </li>
+				<li className="text-center my-3">
+              <Link
+                href="/"
+                className=" text-gray-600 text-center w-full my-2"
+                onClick={() => setMobileNavOpen(false)}
+              >
+                <span>FAQ</span>
               </Link>
             </li>
             <li className="hidden text-center mt-8">
