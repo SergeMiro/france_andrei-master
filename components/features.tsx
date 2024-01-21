@@ -223,7 +223,7 @@ export default function Features() {
 							unmount={false}
 						 >
 							<div className="relative inline-flex flex-col">
-							  <Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={AdministrationImg} wwidth={400} height="369"  alt="stage image" />
+							  <Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={AdministrationImg} width={400} height="369"  alt="stage image" />
 							</div>
 							</Transition>
 
