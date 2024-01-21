@@ -100,16 +100,7 @@ export default function MobileMenu() {
                 <span>Галерея</span>
               </Link>
             </li>
-				<li className="text-center my-3">
-              <Link
-                href="/"
-                className=" text-gray-600 text-center w-full my-2"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                <span>Контакты</span>
-              </Link>
-            </li>
-				<li className="text-center my-3">
+				<li className="hidden text-center my-3">
               <Link
                 href="/"
                 className=" text-gray-600 text-center w-full my-2"

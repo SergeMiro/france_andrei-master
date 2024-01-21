@@ -98,7 +98,7 @@ export default function Header() {
 							<li>
 								<Link href="/" onClick={(e) => { e.preventDefault(); scrollToContacts(); }} className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">Контакты</Link>
 							</li>
-							<li>
+							<li className='hidden'>
 								<Link href="/" className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">FAQ</Link>
 							</li>
 							<li className='hidden'>

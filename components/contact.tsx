@@ -24,6 +24,9 @@ export default function Contact() {
 								<p className="xs:text-2xl md:text-4xl text-white font-bold xs:ml-4 md:ml-8 z-20">Связаться с нами </p>
 							</div>
 							<div className="w-1/5 flex xs:flex-col md:flex-row justify-end items-end xs:gap-2 md:gap-4">
+									<a className='xs:hidden md:block' href="mailto:contact@france-experience.fr" target="_blank">
+										<img className="xs:w-16 md:w-24 cursor-pointer hover:scale-110 anim" src="/fonts/icon_email.png" alt="email" />
+									</a>
 									<a href="https://t.me/FranceExperienceBot" target="_blank">
 										<img className="xs:w-16 md:w-24 cursor-pointer hover:scale-110 anim" src="/fonts/icon_telegram.png" alt="telegram" />
 									</a>
@@ -34,3 +37,12 @@ export default function Contact() {
 		</section>
 	)
 }
+
+{/* <div className="xs:w-1/5 md:w-2/5 flex xs:flex-col md:flex-row justify-end items-end xs:gap-2 md:gap-4">
+<a href="mailto:contact@france-experience.fr?subject=Заявка&body=%0AВаше%20имя:%0A%0AВаша%20фамилия:%0A%0AДата%20рождения:%0A%0AСтрана%20проживания:%0A%0AГород%20проживания:%0A%0AОпишите%20ваш%20запрос:%0A%0A" target="_blank">
+	<img className="xs:w-16 md:w-24 cursor-pointer hover:scale-110 anim" src="/fonts/icon_email.png" alt="email" />
+</a>
+<a href="https://t.me/FranceExperienceBot" target="_blank">
+	<img className="xs:w-16 md:w-24 cursor-pointer hover:scale-110 anim" src="/fonts/icon_telegram.png" alt="telegram" />
+</a>
+</div> */}

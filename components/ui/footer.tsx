@@ -12,9 +12,9 @@ export default function Footer() {
 				<div className="grid sm:grid-cols-12 gap-8 py-8 md:py-12 border-t border-gray-200">
 
 					{/* 1st block */}
-					<div className="sm:col-span-12 lg:col-span-3">
+					<div className="flex justify-center items-center sm:col-span-12 lg:col-span-3">
 						<div className="mb-2">
-							<Image src={Logo_footer} alt="France.Experience Logo" className="w-16 h-16" />
+							<Image src={Logo_footer} alt="France.Experience Logo" className="w-16 h-16 xs:text-start md:text-center" />
 						</div>
 
 					</div>
@@ -132,7 +132,7 @@ export default function Footer() {
 								</div>
 							</div>
 						</form>
-						<h6 className="text-gray-800 font-medium mb-2 mt-8">Служба поддержки 24/7 🕜</h6>
+						<h6 className="text-gray-800 font-medium mb-2 mt-8">Наш email 24/7 🕜</h6>
 						<div className='flex flex-row flex-nowrap justify-start items-center mb-4'>
 							<p className="text-sm text-gray-600">contact@france-experience.fr</p>
 						</div>

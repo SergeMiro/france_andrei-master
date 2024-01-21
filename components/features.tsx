@@ -140,7 +140,7 @@ export default function Features() {
               {/* ТУТ ОШИБКА */}
 				 <div className="max-w-xl md:max-w-none md:w-full mx-auto my-auto marker:items-center md:col-span-3 lg:col-span-6 md:order-1">  {/* ТУТ ОШИБКА */}
 					<div className="transition-all items-center">
-					  <div className="relative flex flex-col text-center lg:text-right" data-aos="zoom-y-out" ref={tabs} width={480}>
+					  <div className="relative flex flex-col text-center lg:text-right" data-aos="zoom-y-out" ref={tabs}>
 						 <Transition
 							show={tab === 1}
 							appear={true}
@@ -155,7 +155,7 @@ export default function Features() {
 							unmount={false}
 						 >
 							<div className="relative inline-flex flex-col">
-							  <Image className="xs:w-64 md:w-auto mx-auto rounded h-auto transform animate-float" src={MigrationImg} alt="migration image" />
+							  <Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={MigrationImg} width={400} height="369"  alt="migration image" />
 							</div>
 						 </Transition>
 						 <Transition
@@ -172,7 +172,7 @@ export default function Features() {
 							unmount={false}
 						 >
 							<div className="relative inline-flex flex-col">
-							  <Image className="xs:w-64 md:w-auto mx-auto rounded h-auto transform animate-float" src={StageImg} alt="stage image" />
+							  <Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={StageImg} width={370} height="342"  alt="stage image" />
 							</div>
 						 </Transition>
 						 <Transition
@@ -189,7 +189,7 @@ export default function Features() {
 							unmount={false}
 						 >
 							<div className="relative inline-flex flex-col">
-							  <Image className="xs:w-64 md:w-auto mx-auto rounded h-auto transform animate-float" src={EducationImg} alt="stage image" />
+							  <Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={EducationImg} width={370} height="342"  alt="stage image" />
 							</div>
 							</Transition>
 							<Transition
@@ -206,7 +206,7 @@ export default function Features() {
 							unmount={false}
 						 >
 							<div className="relative inline-flex flex-col">
-							  <Image className="xs:w-64 md:w-auto mx-auto rounded h-auto transform animate-float" src={WorkImg} alt="stage image" />
+							  <Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={WorkImg} width={370} height="342"  alt="stage image" />
 							</div>
 							</Transition>
 							<Transition
@@ -223,7 +223,7 @@ export default function Features() {
 							unmount={false}
 						 >
 							<div className="relative inline-flex flex-col">
-							  <Image className="xs:w-64 md:w-auto mx-auto rounded h-auto transform animate-float" src={AdministrationImg} alt="stage image" />
+							  <Image className="md:max-w-full mx-auto rounded h-auto transform animate-float" src={AdministrationImg} wwidth={400} height="369"  alt="stage image" />
 							</div>
 							</Transition>
 

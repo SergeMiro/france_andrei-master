@@ -75,7 +75,7 @@ export default function Testimonials() {
 									</span>
 									<a href="https://vk.com/topic-92692367_34307956" target="_blank" className='text-purple-300 hover:text-purple-500 cursor-pointer anim'> ... читать далее</a>
 									<cite className="block font-bold text-lg not-italic mt-3 mb-1">Юлия</cite>
-									<div className="text-gray-600">
+									<div className="text-gray-600 xs:pb-1 md:pb-3">
 										<span className='italic'>г. Воронеж</span>
 										{/* <a className="text-blue-600 hover:underline" href="#0">@Dropbox</a> */}
 									</div>
@@ -97,7 +97,7 @@ export default function Testimonials() {
 									</span>
 									<a href="https://vk.com/topic-92692367_34307956" target="_blank" className='text-purple-300 hover:text-purple-500 cursor-pointer anim'> ... читать далее</a>
 									<cite className="block font-bold text-lg not-italic mt-3 mb-1">Настя</cite>
-									<div className="text-gray-600">
+									<div className="text-gray-600 xs:pb-1 md:pb-3">
 										<span className='italic'>г. Ростов</span>
 										{/* <a className="text-blue-600 hover:underline" href="#0">@Dropbox</a> */}
 									</div>
@@ -119,7 +119,7 @@ export default function Testimonials() {
 									</span>
 									<a href="https://vk.com/topic-92692367_34307956" target="_blank" className='text-purple-300 hover:text-purple-500 cursor-pointer anim'> ... читать далее</a>
 									<cite className="block font-bold text-lg not-italic mt-3 mb-1">Денис</cite>
-									<div className="text-gray-600">
+									<div className="text-gray-600 xs:pb-1 md:pb-3">
 										<span className='italic'>г. Санкт-Петербург</span>
 										{/* <a className="text-blue-600 hover:underline" href="#0">@Dropbox</a> */}
 									</div>

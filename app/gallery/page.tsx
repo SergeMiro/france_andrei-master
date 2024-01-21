@@ -12,7 +12,7 @@ import Gallery from '@/components/gallery/gallery';
 const GalleryPage = () => {
 	return (
 		<>
-			<section className='relative sm:mt-20 md:mt-30 lg:mt-32 lg:mb-16'>
+			<section className='relative xs:mt-14 md:mt-30 xs:py-6 md:py-14'>
 				<Gallery />
 			</section>
 		</>
