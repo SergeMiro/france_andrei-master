@@ -21,7 +21,7 @@ export default function Footer() {
 
 					{/* 2nd block */}
 					<div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-						<h6 className="text-gray-800 font-medium mb-2">Социальные сети</h6>
+						<p className="text-gray-800 font-medium mb-2">Социальные сети</p>
 						<ul className="text-sm">
 							<li className="mb-2 flex items-center hidden">
 								<svg
@@ -52,7 +52,7 @@ export default function Footer() {
 
 					{/* 3rd block */}
 					<div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-						<h6 className="text-gray-800 font-medium mb-2">Ресурсы</h6>
+						<p className="text-gray-800 font-medium mb-2">Ресурсы</p>
 						<ul className="text-sm">
 							<li className="mb-2">
 								<a href="https://www.service-public.fr/" target="_blank" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Service-public</a>
@@ -74,7 +74,7 @@ export default function Footer() {
 
 					{/* 4th block */}
 					<div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-						<h6 className="text-gray-800 font-medium mb-2">Компания</h6>
+						<p className="text-gray-800 font-medium mb-2">Компания</p>
 						<ul className="text-sm">
 							<li className="mb-2">
 								<a href="/about" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">О нас</a>
@@ -96,7 +96,7 @@ export default function Footer() {
 
 					{/* 5th block */}
 					<div className="sm:col-span-6 md:col-span-3 lg:col-span-3">
-						<h6 className="text-gray-800 font-medium mb-2">У вас сложные вопросы ? 😉</h6>
+						<p className="text-gray-800 font-medium mb-2">У вас сложные вопросы ? 😉</p>
 						<div className='flex flex-row flex-nowrap justify-start items-center mb-4'>
 							<p className="text-sm text-gray-600">Получите наш FAQ </p>
 							<a className='ml-3' href="/files/FAQ_France-Experience.pdf" download="FAQ_France-Experience.pdf" aria-label="Скачать FAQ">
@@ -132,7 +132,7 @@ export default function Footer() {
 								</div>
 							</div>
 						</form>
-						<h6 className="text-gray-800 font-medium mb-2 mt-8">Наш email 24/7 🕜</h6>
+						<p className="text-gray-800 font-medium mb-2 mt-8">Наш email 24/7 🕜</p>
 						<div className='flex flex-row flex-nowrap justify-start items-center mb-4'>
 							<p className="text-sm text-gray-600">contact@france-experience.fr</p>
 						</div>

@@ -33,12 +33,12 @@ export default function Hero() {
 					<div className="lg:flex space-x-0 lg:space-x-2 lg:mt-5 sm:mt-2 xs:mt-2">
 						<div className='relative w-full lg:w-3/5 rounded-md inline-block overflow-hidden mt-8 lg:mt-8 sm:mt-2'>
 							<div className='flex xl:flex-nowrap lg:flex-nowrap  md:flex-nowrap  sm:flex-nowrap xs:flex-wrap items-center'>
-								<div className="xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tighter tracking-tighter text-center text-gray-700 mb-1" data-aos="zoom-y-out">Поможем осуществить вашу
+								<p className="xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tighter tracking-tighter text-center text-gray-700 mb-1" data-aos="zoom-y-out">Поможем осуществить вашу
 									<span className="bg-gradient-to-r from-red-500 via-gray-300 to-blue-500 text-transparent bg-clip-text xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl"> французскую</span>
 									<p className="xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tighter tracking-tighter text-gray-700 mb-4 mt-0" data-aos="zoom-y-out">
 										мечту
 									</p>
-								</div>
+								</p>
 							</div>
 
 

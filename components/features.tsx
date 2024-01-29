@@ -38,12 +38,12 @@ export default function Features() {
 			<div className="xs:py-3 sm:py-6 md:py-10 lg:py-12">
 			  <div className="max-w-3xl mx-auto md:text-justify pb-12 md:pb-20 ">
 				 <div className='flex flex-col items-center mb-4'>
-					<h1 ref={aboutUsRef} id="aboutUs" className="h2 text-gray-700">Bienvenue</h1>
+					<p ref={aboutUsRef} id="aboutUs" className="h2 text-gray-700">Bienvenue</p>
 					<img className='w-15 h-10 mt-2' src="/fonts/icon_fr.png" alt="флаг Франции" />
 				 </div>
-				 <p className="xs:text-lg sm:text-lg md:text-xl lg:text-xl text-gray-600">
+				 <h2 className="xs:text-lg sm:text-lg md:text-xl lg:text-xl text-gray-600">
 					Здравствуйте и добро пожаловать на наш сайт. Наша фирма "France expérience" зарегистрирована во Франции, стране, которую мы очень любим и ценим, так же сильно, как и прекрасный французский язык. Мы занимаемся оформлением стажировок, помогаем с оформлением рабочих и других долгосрочных виз, поступлением в учебные заведения, поиском вакансий, продлением вида на жительство, даём консультации по административным вопросам, медицинским страховкам, налоговым декларациям. Будем рады помочь Вам приобрести интернациональный опыт, усовершенствовать разговорные навыки и познакомиться с этой удивительной страной.
-				 </p>
+				 </h2>
 			  </div>
  
 			  <div className="flex xs:flex-wrap-reverse sm:flex-wrap-reverse md:flex-nowrap lg:flex-nowrap max-w-6xl justify-around px-5 sm:px-6">
@@ -59,7 +59,7 @@ export default function Features() {
 						 onClick={(e) => { e.preventDefault(); setTab(1); }}
 					  >
 						 <div className='flex-grow'>
-							<div className="font-bold leading-snug tracking-tight mb-1">Переезд</div>
+							<h1 className="font-bold leading-snug tracking-tight mb-1">Переезд</h1>
 						 </div>
 						 <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
 							<Link href="/services">
@@ -75,7 +75,7 @@ export default function Features() {
 						 onClick={(e) => { e.preventDefault(); setTab(2); }}
 					  >
 						 <div className='flex-grow'>
-							<div className="font-bold leading-snug tracking-tight mb-1">Стажировка</div>
+							<h1 className="font-bold leading-snug tracking-tight mb-1">Стажировка</h1>
 						 </div>
 						 <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
 							<Link href="/services">
@@ -91,7 +91,7 @@ export default function Features() {
 						 onClick={(e) => { e.preventDefault(); setTab(3); }}
 					  >
 						 <div className='flex-grow'>
-							<div className="font-bold leading-snug tracking-tight mb-1">Обучение</div>
+							<h1 className="font-bold leading-snug tracking-tight mb-1">Обучение</h1>
 						 </div>
 						 <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
 							<Link href="/services">
@@ -107,7 +107,7 @@ export default function Features() {
 						 onClick={(e) => { e.preventDefault(); setTab(4); }}
 					  >
 						 <div className='flex-grow'>
-							<div className="font-bold leading-snug tracking-tight mb-1">Работа</div>
+							<h1 className="font-bold leading-snug tracking-tight mb-1">Работа</h1>
 						 </div>
 						 <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
 							<Link href="/services">
@@ -123,7 +123,7 @@ export default function Features() {
 						 onClick={(e) => { e.preventDefault(); setTab(5); }}
 					  >
 						 <div className='flex-grow'>
-							<div className="font-bold leading-snug tracking-tight mb-1">Административные вопросы</div>
+							<h1 className="font-bold leading-snug tracking-tight mb-1">Административные вопросы</h1>
 						 </div>
 						 <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
 							<Link href="/services">
