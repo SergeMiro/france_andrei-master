@@ -85,11 +85,8 @@ export default function Footer() {
 							<li className="mb-2">
 								<a href="/gallery" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Галерея</a>
 							</li>
-							<li className="mb-2">
-								<a href="/contacts" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Контакты</a>
-							</li>
-							<li className="mb-2">
-								<a href="/" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">FAQ</a>
+							<li className="hidden mb-2">
+								<a href="/" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Ответы на вопросы</a>
 							</li>
 						</ul>
 					</div>

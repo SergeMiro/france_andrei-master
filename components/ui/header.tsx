@@ -1,54 +1,91 @@
-'use client'
+'use client';
 
-import { useState, useEffect } from 'react'
-
-import Link from 'next/link'
-import Logo from './logo'
-import Dropdown from '@/components/utils/dropdown'
-import MobileMenu from './mobile-menu'
+import { useState, useEffect } from 'react';
+import { usePathname, useRouter } from 'next/navigation'; // Combined import for cleaner code
+import Link from 'next/link';
+import Logo from './logo';
+// import Dropdown from '@/components/utils/dropdown';
+import MobileMenu from './mobile-menu';
 
 export default function Header() {
   const [top, setTop] = useState<boolean>(true);
+  const pathname = usePathname();
+  const router = useRouter();
 
+  // Function to scroll to the "About Us" section
+  const scrollToAboutUs = async () => {
+    if (pathname === '/') {
+      // We're already on the homepage, attempt to scroll to the "About Us" section
+      const aboutUsElement = document.getElementById('aboutUs');
+      const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
 
-  ///////////////////////////// SCROLL FUNCTION //////////////////////////////////
-  const scrollToAboutUs = () => { 
-    const aboutUsElement = document.getElementById('aboutUs');
-    const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
-
-    if (aboutUsElement) {
-      const targetPosition = aboutUsElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-      console.log('Scrolling to:', targetPosition);
-      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      if (aboutUsElement) {
+        const targetPosition = aboutUsElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      } else {
+        console.error('Element with id "aboutUs" not found.');
+      }
     } else {
-      console.error('Element with id "aboutUs" not found.');
+      // We're not on the homepage, navigate there first
+      await router.push('/');
+      // Use a slight delay to ensure the page has rendered
+      setTimeout(() => {
+        const aboutUsElement = document.getElementById('aboutUs');
+        const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
+
+        if (aboutUsElement) {
+          const targetPosition = aboutUsElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        } else {
+          console.error('Element with id "aboutUs" not found.');
+        }
+      }, 100); // Adjust this timeout as necessary
     }
   };
-
-  const scrollToContacts = () => {
-	const contactUsElement = document.getElementById('contactUs');
-	const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
-
-	if (contactUsElement) {
-	  const targetPosition = contactUsElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-	  console.log('Scrolling to:', targetPosition);
-	  window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+ 
+  // Function to scroll to the "Contact" section
+  const scrollToContacts = async () => {
+	if (pathname === '/') {
+	  // Already on the homepage, directly scroll to the "Contacts" section
+	  const contactUsElement = document.getElementById('contactUs');
+	  const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
+ 
+	  if (contactUsElement) {
+		 const targetPosition = contactUsElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+		 console.log('Scrolling to:', targetPosition);
+		 window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+	  } else {
+		 console.error('Element with id "contactUs" not found.');
+	  }
 	} else {
-	  console.error('Element with id "contactUs" not found.');
+	  // Not on the homepage, navigate there first
+	  await router.push('/');
+	  // Use a slight delay to ensure the page has rendered
+	  setTimeout(() => {
+		 const contactUsElement = document.getElementById('contactUs');
+		 const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
+ 
+		 if (contactUsElement) {
+			const targetPosition = contactUsElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+			window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+		 } else {
+			console.error('Element with id "contactUs" not found.');
+		 }
+	  }, 100); // Adjust this timeout as necessary
 	}
  };
 //////////////////////////////////////////////////////////////////////////////////
 
-  // Добавляем слушателя события прокрутки
+  // Scroll handler to determine if user has scrolled down the page
   const scrollHandler = () => {
-    window.pageYOffset > 10 ? setTop(false) : setTop(true);
-  };
-  useEffect(() => {
-    scrollHandler();
-    window.addEventListener('scroll', scrollHandler);
-    // Очищаем слушателя события при размонтировании компонента
-    return () => window.removeEventListener('scroll', scrollHandler);
-  }, [top]);
+	window.pageYOffset > 10 ? setTop(false) : setTop(true);
+ };
+
+ useEffect(() => {
+	scrollHandler();
+	window.addEventListener('scroll', scrollHandler);
+	return () => window.removeEventListener('scroll', scrollHandler);
+ }, [top]);
 
 	return (
 		<header className={`fixed w-full z-30 md:bg-opacity-95 transition duration-300 ease-in-out ${!top ? 'bg-white backdrop-blur-sm shadow-lg' : ''}`}>
@@ -65,14 +102,13 @@ export default function Header() {
 						{/* Desktop sign in links */}
 						<ul className="flex grow justify-end flex-nowrap items-center">
 							<li>
-								<Link href="/" onClick={(e) => { e.preventDefault(); scrollToAboutUs(); }} className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">О нас</Link>
+								<Link href="/" onClick={(e) => {e.preventDefault(); scrollToAboutUs();}} className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">О нас</Link>
 							</li>
 							<li>
 								<Link href="/services" className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">Наши услуги</Link>
 							</li>
-							<li className='hidden'>
+							{/* <li className=''>
 								<Dropdown title="Наши услуги">
-									{/* Ваше содержимое Dropdown */}
 									<ul className='px-4'>
 										<li className='py-1'>
 											<Link href="/services#stage">Стажировка</Link>
@@ -91,7 +127,7 @@ export default function Header() {
 										</li>
 									</ul>
 								</Dropdown>
-							</li>
+							</li> */}
 							<li>
 								<Link href="/gallery" className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">Галерея</Link>
 							</li>

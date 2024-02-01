@@ -1,10 +1,77 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { usePathname, useRouter } from 'next/navigation'; // Combined import for cleaner code
 import { Transition } from "@headlessui/react";
 import Link from "next/link";
 
+
 export default function MobileMenu() {
+
+	const pathname = usePathname();
+	const router = useRouter();
+
+	const scrollToAboutUs = async () => {
+		if (pathname === '/') {
+		  // We're already on the homepage, attempt to scroll to the "About Us" section
+		  const aboutUsElement = document.getElementById('aboutUs');
+		  const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
+  
+		  if (aboutUsElement) {
+			 const targetPosition = aboutUsElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+			 window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+		  } else {
+			 console.error('Element with id "aboutUs" not found.');
+		  }
+		} else {
+		  // We're not on the homepage, navigate there first
+		  await router.push('/');
+		  // Use a slight delay to ensure the page has rendered
+		  setTimeout(() => {
+			 const aboutUsElement = document.getElementById('aboutUs');
+			 const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
+  
+			 if (aboutUsElement) {
+				const targetPosition = aboutUsElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+				window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+			 } else {
+				console.error('Element with id "aboutUs" not found.');
+			 }
+		  }, 100); // Adjust this timeout as necessary
+		}
+	 };
+	
+	 // Function to scroll to the "Contact" section
+	 const scrollToContacts = async () => {
+	  if (pathname === '/') {
+		 // Already on the homepage, directly scroll to the "Contacts" section
+		 const contactUsElement = document.getElementById('contactUs');
+		 const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
+	
+		 if (contactUsElement) {
+			const targetPosition = contactUsElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+			console.log('Scrolling to:', targetPosition);
+			window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+		 } else {
+			console.error('Element with id "contactUs" not found.');
+		 }
+	  } else {
+		 // Not on the homepage, navigate there first
+		 await router.push('/');
+		 // Use a slight delay to ensure the page has rendered
+		 setTimeout(() => {
+			const contactUsElement = document.getElementById('contactUs');
+			const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
+	
+			if (contactUsElement) {
+			  const targetPosition = contactUsElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+			  window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+			} else {
+			  console.error('Element with id "contactUs" not found.');
+			}
+		 }, 100); // Adjust this timeout as necessary
+	  }
+	};
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
 
   const trigger = useRef<HTMLButtonElement>(null);
@@ -77,7 +144,7 @@ export default function MobileMenu() {
               <Link
                 href="/"
                 className=" text-gray-600 text-center w-full my-2"
-                onClick={() => setMobileNavOpen(false)}
+                onClick={(e) => { e.preventDefault(); scrollToAboutUs(); setMobileNavOpen(false); }}
               >
                 <span>О нас</span>
               </Link>
@@ -100,13 +167,24 @@ export default function MobileMenu() {
                 <span>Галерея</span>
               </Link>
             </li>
-				<li className="hidden text-center my-3">
+				
+				{/* <li className="hidden text-center my-3">
               <Link
                 href="/"
                 className=" text-gray-600 text-center w-full my-2"
                 onClick={() => setMobileNavOpen(false)}
               >
                 <span>FAQ</span>
+              </Link>
+            </li> */}
+
+				<li className="text-center my-3">
+              <Link
+                href="/"
+                className=" text-gray-600 text-center w-full my-2"
+                onClick={(e) => { e.preventDefault(); scrollToContacts(); setMobileNavOpen(false); }}
+              >
+                <span>Контакты</span>
               </Link>
             </li>
             <li className="hidden text-center mt-8">
