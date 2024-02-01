@@ -7,10 +7,11 @@ import Link from "next/link";
 
 
 export default function MobileMenu() {
-
+	const [top, setTop] = useState<boolean>(true);
 	const pathname = usePathname();
 	const router = useRouter();
 
+    // Function to scroll to the "About Us" section
 	const scrollToAboutUs = async () => {
 		if (pathname === '/') {
 		  // We're already on the homepage, attempt to scroll to the "About Us" section
@@ -72,6 +73,19 @@ export default function MobileMenu() {
 		 }, 100); // Adjust this timeout as necessary
 	  }
 	};
+	// Scroll handler to determine if user has scrolled down the page
+	const scrollHandler = () => {
+		window.pageYOffset > 10 ? setTop(false) : setTop(true);
+	};
+
+	useEffect(() => {
+		scrollHandler();
+		window.addEventListener('scroll', scrollHandler);
+		return () => window.removeEventListener('scroll', scrollHandler);
+	}, [top]);
+
+///////////////////////////////////////////////////////
+
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
 
   const trigger = useRef<HTMLButtonElement>(null);
@@ -215,12 +229,6 @@ export default function MobileMenu() {
                 </svg>
               </Link>
             </li>
-
-
-
-
-
-
 
 
           </ul>

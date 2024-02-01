@@ -1,9 +1,89 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState, useEffect, FormEvent } from 'react';
+import { usePathname, useRouter } from 'next/navigation'; // Combined import for cleaner code
+import Link from "next/link";
 import Image from 'next/image'
 import Logo_footer from '@/public/images/logo.svg'
 
 
 export default function Footer() {
+	const [top, setTop] = useState<boolean>(true);
+	const pathname = usePathname();
+	const router = useRouter();
+ 
+  // Function to scroll to the "About Us" section
+  const scrollToAboutUs = async () => {
+	if (pathname === '/') {
+	  // We're already on the homepage, attempt to scroll to the "About Us" section
+	  const aboutUsElement = document.getElementById('aboutUs');
+	  const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
+
+	  if (aboutUsElement) {
+		 const targetPosition = aboutUsElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+		 window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+	  } else {
+		 console.error('Element with id "aboutUs" not found.');
+	  }
+	} else {
+	  // We're not on the homepage, navigate there first
+	  await router.push('/');
+	  // Use a slight delay to ensure the page has rendered
+	  setTimeout(() => {
+		 const aboutUsElement = document.getElementById('aboutUs');
+		 const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
+
+		 if (aboutUsElement) {
+			const targetPosition = aboutUsElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+			window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+		 } else {
+			console.error('Element with id "aboutUs" not found.');
+		 }
+	  }, 100); // Adjust this timeout as necessary
+	}
+ };
+
+ // Function to scroll to the "Contact" section
+ const scrollToContacts = async () => {
+  if (pathname === '/') {
+	 // Already on the homepage, directly scroll to the "Contacts" section
+	 const contactUsElement = document.getElementById('contactUs');
+	 const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
+
+	 if (contactUsElement) {
+		const targetPosition = contactUsElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+		console.log('Scrolling to:', targetPosition);
+		window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+	 } else {
+		console.error('Element with id "contactUs" not found.');
+	 }
+  } else {
+	 // Not on the homepage, navigate there first
+	 await router.push('/');
+	 // Use a slight delay to ensure the page has rendered
+	 setTimeout(() => {
+		const contactUsElement = document.getElementById('contactUs');
+		const headerHeight = document.getElementById('header_content')?.offsetHeight || 0;
+
+		if (contactUsElement) {
+		  const targetPosition = contactUsElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+		  window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+		} else {
+		  console.error('Element with id "contactUs" not found.');
+		}
+	 }, 100); // Adjust this timeout as necessary
+  }
+};
+ 
+	// Scroll handler to determine if user has scrolled down the page
+	const scrollHandler = () => {
+	 window.pageYOffset > 10 ? setTop(false) : setTop(true);
+  };
+ 
+  useEffect(() => {
+	 scrollHandler();
+	 window.addEventListener('scroll', scrollHandler);
+	 return () => window.removeEventListener('scroll', scrollHandler);
+  }, [top]);
+
 	return (
 		<footer>
 			<div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -77,7 +157,7 @@ export default function Footer() {
 						<p className="text-gray-800 font-medium mb-2">Компания</p>
 						<ul className="text-sm">
 							<li className="mb-2">
-								<a href="/about" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">О нас</a>
+								<Link href="/" onClick={(e) => { e.preventDefault(); scrollToAboutUs(); }} className='text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out'>О нас</Link>
 							</li>
 							<li className="mb-2">
 								<a href="/services" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Услуги</a>
@@ -85,8 +165,13 @@ export default function Footer() {
 							<li className="mb-2">
 								<a href="/gallery" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Галерея</a>
 							</li>
-							<li className="hidden mb-2">
+
+							{/* <li className="mb-2">
 								<a href="/" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Ответы на вопросы</a>
+							</li> */}
+
+							<li className="mb-2">
+								<Link href="/" onClick={(e) => { e.preventDefault(); scrollToContacts() }} className='text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out'>Контакты</Link>
 							</li>
 						</ul>
 					</div>
