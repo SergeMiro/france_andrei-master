@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-	title: 'Галерея France Experience: стажировка, учёба и работа во Франции',
-	description: 'Исследуйте нашу галерею и вдохновляйтесь историями успеха стажировок, учёбы и работы во Франции.',
+	title: 'Галерея France Experience',
+	description: 'Истории успеха наших клиентов, вдохновляющие своим опытом стажировок, учёбы и работы во Франции.',
 }
 
 // require('dotenv').config();
