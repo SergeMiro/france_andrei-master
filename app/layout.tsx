@@ -1,6 +1,7 @@
 import './css/style.css'
 
 import { Inter } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import Header from '@/components/ui/header'
 import Banner from '@/components/banner'
@@ -29,6 +30,7 @@ export default function RootLayout({
           {children}
           <Banner />
         </div>
+        <SpeedInsights />
       </body>
     </html>
   )
