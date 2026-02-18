@@ -1,9 +1,13 @@
+const { heroui } = require("@heroui/react");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
 		'./app/**/*.{js,ts,jsx,tsx}',
 		'./pages/**/*.{js,ts,jsx,tsx}',
 		'./components/**/*.{js,ts,jsx,tsx}',
+		'./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}',
+		'./node_modules/@heroui/react/node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}',
 	],
 	darkMode: "class",
 	theme: {
@@ -83,7 +87,7 @@ module.exports = {
 				'1/1': '100%',
 			},
 			fontFamily: {
-				inter: ['var(--font-inter)', 'sans-serif'],
+				inter: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
 				lora: ["Lora", "serif"],
 				yes: ["Yeseva One", "cursive"],
 				meri: ["Merriweather", "serif"],
@@ -155,5 +159,6 @@ module.exports = {
 	},
 	plugins: [
 		require('@tailwindcss/forms'),
+		heroui(),
 	],
 };
