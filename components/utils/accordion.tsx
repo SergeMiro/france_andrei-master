@@ -18,7 +18,7 @@ export default function Accordion({
 
   const [accordionOpen, setAccordionOpen] = useState<boolean>(false)
   const accordion = useRef<HTMLDivElement>(null)
-  const Component = tag as keyof JSX.IntrinsicElements
+  const Component = tag as keyof React.JSX.IntrinsicElements
 
   useEffect(() => {
     setAccordionOpen(active)
